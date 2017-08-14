@@ -7,11 +7,11 @@ function userid_validation(x,y){
  console.log ("you have entered", inputUserid)
  
  if (inputUserid.length == 0) {
-        alert("USER ID should not be empty");	
+        console.log("USER ID should not be empty");	
      } else if (inputUserid.length < 5) {
- 			alert("USER ID should be more than 5 characters");
+ 			console.log("USER ID should be more than 5 characters");
  			} else if (inputUserid.length > 12) {
-    				alert("USER ID should be less than 12 characters");
+    				console.log("USER ID should be less than 12 characters");
  			} else {
 	 			document.getElementsByName("passid")[0].focus();
 	}
@@ -23,11 +23,11 @@ function passid_validation(a,b){
  console.log("you have entered",inputPassid);
 
 if (inputPassid.length == 0) {
-        alert("USER Password should not be empty");	
+        console.log("USER Password should not be empty");	
      } else if (inputPassid.length < 7) {
- 			alert("USER Password should be more than 7 characters");
+ 			console.log("USER Password should be more than 7 characters");
  			} else if (inputPassid.length > 12) {
-    				alert("USER Password should be less than 12 characters");
+    				console.log("USER Password should be less than 12 characters");
  			} else {
 	 			document.getElementsByName("username")[0].focus();
 	}
@@ -43,7 +43,7 @@ function allLetter(){
  if (inputUsername.match(allLetters)) {
  	document.getElementsByName("email")[0].focus();
  	} else {
- 		alert("User’s name should have alphabet characters only!");
+ 		console.log("User’s name should have alphabet characters only!");
  	}	
 }
 
@@ -54,7 +54,7 @@ function ValidateEmail(){
     var atpos  = inputEmail.indexOf("@");
     var dotpos = inputEmail.lastIndexOf(".");
     if (atpos<1 || dotpos<atpos+2 || dotpos+2>=inputEmail.length) {
-    alert("You have entered an invalid email format!");
+    console.log("You have entered an invalid email format!");
    }
 }
 
